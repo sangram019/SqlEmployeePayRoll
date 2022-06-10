@@ -18,3 +18,10 @@ insert into employee_payroll values('Sangram',25000,'2018-03-21'),('Dinesh',2000
 UC4 - Retrieve all the employee_payroll data
 
 SELECT * FROM employee_payroll;
+
+UC5- Ability to retrieve salary data and start date
+
+SELECT salary FROM employee_payroll WHERE name = 'Sangram';
+
+SELECT * FROM employee_payroll WHERE startdate BETWEEN CAST('2019-05-27' AS DATE) AND GETDATE();
+
