@@ -25,3 +25,11 @@ SELECT salary FROM employee_payroll WHERE name = 'Sangram';
 
 SELECT * FROM employee_payroll WHERE startdate BETWEEN CAST('2019-05-27' AS DATE) AND GETDATE();
 
+UC6 - Ability to add Gender to employee_payroll table
+
+ALTER TABLE employee_payroll ADD gender VARCHAR(1);
+
+UPDATE employee_payroll set gender='M' where name = 'Sangram'or name = 'susant'
+UPDATE Employee_Payroll set Gender='M' where name = 'Rakesh' or name = 'dinesh';
+UPDATE Employee_Payroll set Gender='F' where name = 'Prajna';
+
