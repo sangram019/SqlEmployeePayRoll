@@ -33,3 +33,17 @@ UPDATE employee_payroll set gender='M' where name = 'Sangram'or name = 'susant'
 UPDATE Employee_Payroll set Gender='M' where name = 'Rakesh' or name = 'dinesh';
 UPDATE Employee_Payroll set Gender='F' where name = 'Prajna';
 
+UC7 - Ability to find sum,average,min,max & count
+
+SELECT SUM(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+SELECT SUM(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY gender;
+
+SELECT AVG(salary) FROM employee_payroll WHERE gender = 'M' GROUP BY gender;
+SELECT AVG(salary) FROM employee_payroll WHERE gender = 'F' GROUP BY gender;
+
+SELECT gender, MIN(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, MAX(salary) FROM employee_payroll GROUP BY gender;
+
+SELECT gender, COUNT(name) FROM employee_payroll GROUP BY gender;
+
